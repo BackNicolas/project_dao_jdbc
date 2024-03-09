@@ -40,6 +40,16 @@ public class Program {
 		System.out.println("New Id: " + newSeller.getId());
 		
 		
+		System.out.println("\n === TEST 5: seller Update ===");
+		seller = sellerDao.findId(1);
+		seller.setName("Pele Junior");
+		sellerDao.update(seller);
+		System.out.println("Update Complete!");
+		
+		
+		
+		
+		
 	}
 
 }
