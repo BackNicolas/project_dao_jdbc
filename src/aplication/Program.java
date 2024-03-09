@@ -1,5 +1,7 @@
 package aplication;
 
+
+import java.util.Date;
 import java.util.List;
 
 import entities.Department;
@@ -31,6 +33,11 @@ public class Program {
 		for(Seller obj : list) {
 			System.out.println(obj);
 		}
+		
+		System.out.println("\n === TEST 4: seller Insert ===");
+		Seller newSeller = new Seller(null, "Greg", "Greg@gmail.com", new Date(), 3000.00, department);
+		sellerDao.insert(newSeller);
+		System.out.println("New Id: " + newSeller.getId());
 		
 		
 	}
